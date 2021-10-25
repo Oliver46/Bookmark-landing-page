@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    list-style-type: none;
+}
+
+#result.result {
+    background: $softRed;
+    color: white;
+    height: 35px;
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: none;
+    position: relative;
+    z-index: 10;
+}
+#result.result::after {
+    z-index: 100;
+    content: '';
+    position: absolute;
+    background-image: url('/images/icon-error.svg');
+}
+
+
+h1, h2, h3, h4, h5, h6, p{
+    padding: 0;
+    margin: 0;
+}
+
+.fixed {
+    position: fixed;
+}
+.nav-img{
+    display: none;
+}
+
+.btn-danger{
+    padding: 5px 25px;
+}
+
+hr {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+span.blue-shape-left {
+    position: absolute;
+    width: 40%;
+    height: 45%;
+    background: $softBlue;
+    top: 44%;
+    right: 0;
+    border-radius: 0px 0px 0px 350px;
+    z-index: -1;
+}
+
+span.blue-shape-right {
+    position: absolute;
+    width: calc(120% - 100px);
+    height: 95%;
+    background: $softBlue;
+    top: 30%;
+    left: -20%;
+    border-radius: 0px 0px 350px 0px;
+    z-index: -1;
+}
+
+#check{
+    display: none;
+}
+.checkbtn {
+    cursor: pointer !important;
+    display: none; 
+}
+
+label.checkbtn img {
+    z-index: 1000;
+    position: relative;
+}
+
+
+.btn-primary:hover {
+    color: $softBlue;
+}
+.btn-light:hover {
+    color: black;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+@media(max-width:700px) { 
+
+    // Hero Section {
+        .hero-section_text-content{
+            order: 2;
+            padding-top: 3rem !important;
+        }
+        .blue-shape-left{
+            width: 90% !important;
+            height: 25% !important;
+            top:30% !important;
+            display: block !important;
+        }
+        .hero-section_img {
+            order: 1;
+        }
+   
+    //Navbar 
+    header .header-wrapper .logo-container {
+            width: 50% !important;
+    }
+    header .header-wrapper .logo-container img{
+                padding-left: 0px !important;
+                width: 75% !important;
+    }
+    .hero-container .hero-section_img img {
+        width: 100%;
+    }
+    // hamburger
+    .checkbtn {
+        display: block;
+        padding-top:15px;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+    nav{
+        position: relative;
+        .nav-img{
+            display: block;
+            position: absolute;
+            bottom: 5%;
+            img{
+                padding: 10px;
+            }
+        }
+    }
+    
+    ul{
+        padding-left: 0px !important;
+
+        &.navbar {
+            position: fixed;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            left: -100%;
+            top: 0px;
+            background-color: rgba(37, 43, 70, .99);
+            z-index: 10;
+            padding-top: 22%;
+            li {
+                text-align: center;
+                padding-top: 20px;
+                margin: 10px auto;
+                display: block;
+                width: 90%;
+                border-top: 1px solid white;
+                a {
+                    font-weight: 300 !important;
+                    font-size: 1.5rem !important;
+                    color: white !important;
+                }
+                button{
+                    width: 100%;
+                    background-color: transparent;
+                    border: 1px solid white;
+                    outline: none !important;
+                    &:focus{
+                        border: 1px solid white;
+                        background-color: transparent;
+                        box-shadow: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    input[type="submit"]{
+        margin-top: 10px;
+    }
+
+
+
+    //feature section
+    .feature-section{
+        padding-bottom: 4rem !important;
+        .section-headtitle{
+            p{
+                width: 90% !important;
+            }
+        }
+        ul {
+            &.head-links{
+                flex-direction: column !important;
+                align-items: center;
+                margin-bottom: 0px;
+                li {
+                    padding-top: 20px !important;
+                    border-top: 1px solid $grayishBlue;
+                    width: 60%;
+                    text-align: center;
+                    padding-bottom: 16px !important;
+                    // padding: 10px 0px;
+                }
+            }
+        }
+        .feature-section_text-content {
+            padding-left: 3rem !important;
+
+            button{
+                display: none;
+            }
+        }
+    }
+
+    .download-section {
+        p{
+            width: 80% !important;
+        }
+    }
+
+    .faq-section {
+        p {
+            width: 80% !important;
+        }
+    }
+
+
+    footer{
+        .footer-wrapper {
+            flex-direction: column !important;
+            justify-content: center !important;
+            .footer-column1{
+                text-align: center;
+                padding-left: 0px;
+            }
+            .footer-column2 {
+                text-align: center;
+                ul{
+                   
+                    &.footer{
+                        flex-direction: column !important;
+                    
+                            text-align: center;
+                            li {
+                                padding: 10px 0px !important;
+                            }
+                      
+                    }
+                }
+            }
+            .footer-column3{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                img {
+                    padding: 15px;
+                }
+            }
+        }
+        
+    } 
+   
+}
+
+@media(max-width:900px){ 
+    .hero-container .hero-section_img img {
+        width: 100% !important;
+    }
+    .feature-section  .feature-section_img img{
+        position: none;
+        width: 100% !important;
+    }
+    .card {
+        margin: auto;
+        width: 80%;
+    }
+   
+}
+
+@media(max-width:1200px){
+    span.blue-shape-left, span.blue-shape-right {
+        display: none;
+    }
+    .hero-section .hero-container {
+        display: flex;
+        flex-direction: column;
+    }
+    // Feature 
+    .feature-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    // Accordion
+    .faq-section .accordion {
+        width: 100% !important;
+    }
+
+    // sign-up
+    .sign-up .form {
+        flex-direction: column !important;
+    }
+}
+
+@media(min-width:1281px){
+    .hero-section, .feature-section, .download-section, .faq-section {
+        padding: 10rem 0rem;
+        // height: 100vh;
+    }
+    .align-self-start img {
+        width: 100% !important;
+    }
+    .feature-section_img img {
+        width: 100%;
+    }
+}
+
+
+
+
+
+

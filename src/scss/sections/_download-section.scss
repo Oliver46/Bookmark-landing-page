@@ -1,0 +1,66 @@
+.download-section {
+    padding-top: 1.5rem;
+    padding-bottom: 10rem;
+    p {
+        width: 45%;
+        margin: auto;
+        color:$grayishBlue;
+        padding-top: 1.6rem;
+    }
+    .cards {
+        position: relative;
+        padding-top: 5rem;
+
+        .card1{
+            position: relative;
+            transition: all .5s ease;
+            top: 1px;
+            &:hover {
+                top: 20px;
+            }
+        }
+        .card2{
+            position: relative;
+            transition: all .5s ease;
+            top: 40px;
+            &:hover {
+                top: 60px;
+            }
+        }
+        .card3{
+            position: relative;
+            transition: all .5s ease;
+            top: 80px;
+            &:hover {
+                top: 100px;
+            }
+        }
+
+        .card {
+            height: 21rem;
+            border: none;
+            box-shadow: 2px 2px 5px 2px $grayishBlue;
+           text-align: center;
+            img {
+                width: 30%;
+                margin: auto;
+            }
+            h3 {
+                font-size: 1.2rem;
+            }
+            p {
+                width: 100%;
+                padding: 0px 0px 20px;
+                margin: 0px;
+            }
+            .dots {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            button{
+                margin: 20px 20px 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.sign-up {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    background-color: $softBlue;
+
+    .joined{
+        font-size: 12px;
+        color: white;
+        letter-spacing: 4px;
+    }
+
+    h3{
+        width: 95%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        color: white;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+
+        input#email{
+            height: 40px !important;
+            padding: 0px 40px;
+            width: 100%;
+            min-width: 300px;
+        }
+        input[type=submit]{
+            height: 40px !important;
+            margin-left: 5px;
+            &:hover{
+                background: transparent;
+                border: 1px solid $softRed;
+                color: $softRed;
+            }
+        }
+    }
+}
+

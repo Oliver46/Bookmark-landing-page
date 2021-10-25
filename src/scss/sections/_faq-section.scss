@@ -1,0 +1,38 @@
+.faq-section {
+    padding-top: .5rem;
+    padding-bottom: 8rem;
+     p {
+         width: 45%;
+         padding-top: 1rem;
+         margin: auto;
+         color: $grayishBlue;
+     }
+     .accordion{
+        margin: auto;
+        width: 45%;
+        padding-top: 3.8rem;
+        padding-bottom: 5rem;
+
+        .accordion-item{
+            button{
+                &.accordion-button{
+                    &:hover{
+                        color: $softRed;
+                    }
+                }
+            }
+        }
+     }
+     .moreinfo-container{
+         text-align: center;
+         margin: auto;
+     }
+     button {
+        &.btn{
+            &:hover {
+                background: white;
+            }
+        }
+       
+    }
+}

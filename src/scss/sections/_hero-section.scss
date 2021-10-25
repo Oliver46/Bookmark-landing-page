@@ -1,0 +1,44 @@
+// Hero Section
+.hero-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 5rem;
+    
+        .hero-section_text-content {
+            padding-top: 7rem;
+            padding-left: 3rem;
+            position: relative;
+            
+            h1 {
+                letter-spacing: 3px;
+            }
+
+            p {
+                width: 98%;
+                padding-top: 1.6rem;
+                padding-bottom: 1.8rem;
+                letter-spacing: .5px;
+                color: $grayishBlue;
+            }
+        }
+        .hero-section_img{
+            img {
+                padding-top: 2rem;
+                width: 38rem;
+                z-index: 10;
+            }
+        }
+        button {
+            &.btn{
+                &:hover {
+                    background: white;
+                }
+            }
+           
+        }
+    
+}
+
