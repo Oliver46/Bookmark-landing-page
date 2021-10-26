@@ -21,11 +21,9 @@ navbarLinks.forEach(function(elink){
     elink.addEventListener('click', function(e){
         var navbarlink = e.target.innerHTML;
         if(!icon.classList.contains("close")) {
-
         }else{
             closeNavbar();
         }
-       
     });
 })
 
@@ -72,23 +70,11 @@ function validateEmail(email) {
     if (validateEmail(email)) {
     $("#email").css("border", "");
     $result.removeClass("result");
-    // $result.css("padding", "");
-    // $result.css("display", "none");
-    //   $result.text(email + " is valid :)");
-    //   $result.css("color", "green");
+
     } else {
     $result.text("Whoops, make sure it's an email");
     $("#email").css("border", "2px solid red");
-
-    // $result.css("background", "red");
-    // $result.css("color", "white");
-    // $result.css("height", "30px");
-    // $result.css("padding", "5px");
-    // $result.css("display", "block");
-    // $result.css("margin-bottom", "5px");
     $result.addClass("result");
-    //   $result.text(email + " is not valid :(");
-   
     }
     return false;
   }
