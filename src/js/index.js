@@ -9,27 +9,54 @@ import '@fortawesome/fontawesome-free/js/brands';
 
 
 
-
-// Navbar
+var navbarLinks = document.querySelectorAll("ul.navbar");
+var navbar = document.getElementsByClassName("navbar")[0];
 
 var icon = document.querySelector("#icon");
 var logo = document.querySelector("#logo");
 var body = document.querySelector("body");
+
+//Mobile Nav links
+navbarLinks.forEach(function(elink){
+    elink.addEventListener('click', function(e){
+        var navbarlink = e.target.innerHTML;
+        if(!icon.classList.contains("close")) {
+
+        }else{
+            closeNavbar();
+        }
+       
+    });
+})
+
+// Navbar icon
 logo.src = "https://www.leonoliver.com/img/logo-bookmark.svg";  
 icon.addEventListener('click', function() {
     if(!icon.classList.contains("close")) {
-        icon.classList.add("close");
-        icon.src = "https://www.leonoliver.com/img/icon-close.svg";
-        logo.src = "https://www.leonoliver.com/img/logo-white.svg";
-        body.classList.add("fixed");
+       
+        openNavbar();
        
     }else{
-        icon.src = "https://www.leonoliver.com/img/icon-hamburger.svg";
-        logo.src = "https://www.leonoliver.com/img/logo-bookmark.svg";  
-        icon.classList.remove("close");
-        body.classList.remove("fixed");
+        closeNavbar();
     }
 });
+
+function openNavbar(){
+    icon.classList.add("close");
+    icon.src = "https://www.leonoliver.com/img/icon-close.svg";
+    logo.src = "https://www.leonoliver.com/img/logo-white.svg";
+    body.classList.add("fixed");
+    navbar.style.left = "0";
+}
+
+function closeNavbar(){
+    icon.src = "https://www.leonoliver.com/img/icon-hamburger.svg";
+    logo.src = "https://www.leonoliver.com/img/logo-bookmark.svg";  
+    icon.classList.remove("close");
+    body.classList.remove("fixed");
+    navbar.style.left = "-100%";
+}
+
 
 // Validate Email
 function validateEmail(email) {

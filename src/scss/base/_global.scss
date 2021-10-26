@@ -6,6 +6,10 @@
     list-style-type: none;
 }
 
+.closeNav {
+    left: 0;
+}
+
 #result.result {
     background: $softRed;
     color: white;
@@ -129,9 +133,9 @@ label.checkbtn img {
         display: block;
         padding-top:15px;
     }
-    #check:checked ~ ul {
-        left: 0;
-    }
+    // #check:checked ~ ul {
+    //     left: 0;
+    // }
     nav{
         position: relative;
         .nav-img{
