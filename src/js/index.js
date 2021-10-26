@@ -45,7 +45,7 @@ function openNavbar(){
     icon.src = "https://www.leonoliver.com/img/icon-close.svg";
     logo.src = "https://www.leonoliver.com/img/logo-white.svg";
     body.classList.add("fixed");
-    navbar.style.left = "0";
+    navbar.classList.add("closeNav");
 }
 
 function closeNavbar(){
@@ -53,7 +53,7 @@ function closeNavbar(){
     logo.src = "https://www.leonoliver.com/img/logo-bookmark.svg";  
     icon.classList.remove("close");
     body.classList.remove("fixed");
-    navbar.style.left = "-100%";
+    navbar.classList.remove("closeNav");
 }
 
 
