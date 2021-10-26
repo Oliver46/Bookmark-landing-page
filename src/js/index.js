@@ -6,6 +6,7 @@ import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
+import { features } from "caniuse-lite";
 
 
 
@@ -82,6 +83,8 @@ function validateEmail(email) {
   $("#email").on("input", validate);
 
 
+
+
 //   Features
 var navlinks = Array.from(document.querySelectorAll("ul.head-links"));
 var featureTitle = document.querySelector(".feature-section_title");
@@ -90,8 +93,8 @@ var featuresectionImage = document.querySelector(".feature-section_image");
 console.log(featuresectionImage);
 
 
-  navlinks.forEach(function(element) {
-      element.addEventListener('click', function(e){
+navlinks.forEach(function(element) {
+    element.addEventListener('click', function(e){
         console.log(e.target.innerHTML);
         var link = e.target.innerHTML;
         
@@ -113,8 +116,9 @@ console.log(featuresectionImage);
                 break;
         }
 
-      });
-  });
+    });
+});
+
 
 
 
